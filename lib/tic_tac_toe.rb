@@ -105,7 +105,10 @@ class TicTacToe
     end
 
     def play
-        turn until over?
+        until over?
+          turn
+        end
+        
         if won?
         winner == "X" || winner == "0"
         puts "Congratulations #{winner}!"
